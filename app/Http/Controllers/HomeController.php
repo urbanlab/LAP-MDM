@@ -23,6 +23,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+       /* $folders = Folder::all();
+        foreach ($folders as $folder) {
+        echo $folder->icon;*/
+        $folders = '1522';
+        //$user = Users::find(1); //lets say for test we just took firs user
+        //return $user->products()->get();
+        return view('home',["folders"=>$folders]);
+       // }
     }
 }

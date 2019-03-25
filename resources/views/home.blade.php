@@ -16,6 +16,8 @@
 
                     You are logged in!
 
+                    {{$folders}}
+
         
 
                 </div>

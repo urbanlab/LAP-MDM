@@ -7,7 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'LAP') }}</title>
+    <title>{{ config('app.name', "Livret d'Accompagnement Personnalisé") }}</title>
 
     <!-- Scripts -->
     {!! MaterializeCSS::include_js() !!}
@@ -21,13 +21,17 @@
     <!-- Styles -->
     {!! MaterializeCSS::include_full() !!}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', "Livret d'Accompagnement Personnalisé") }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -44,11 +48,11 @@
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="nav-link" href="{{ route('login') }}">{{ __("S'identifier") }}</a>
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __("S'ldkzdjisinscrire") }}</a>
                                 </li>
                             @endif
                         @else
@@ -79,5 +83,8 @@
             @yield('content')
         </main>
     </div>
+
+
+            @yield('head')<!-- Chargement des scripts et tout -->
 </body>
 </html>

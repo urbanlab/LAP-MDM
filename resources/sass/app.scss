@@ -1,4 +1,6 @@
 
+
+
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -11,4 +13,114 @@
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body{
+  background-image: linear-gradient(#FF7660, #FDD093), ;
+  background-repeat:no-repeat;
+  height: 100vh;
+
+}
+.logo{
+  text-align: center;
+  width: 100%;
+}
+
+.logo img{
+  width: 50%;
+}
+
+
+   input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
+     border-bottom: 1px solid $primary-color;
+     box-shadow: 0 1px 0 0 $primary-color;
+   }
+
+   input[type=password]:not(.browser-default):focus:not([readonly]) {
+     border-bottom: 1px solid $primary-color;
+     box-shadow: 0 1px 0 0 $primary-color;
+   }
+
+   input[type=email]:not(.browser-default):focus:not([readonly]) {
+     border-bottom: 1px solid $primary-color;
+     box-shadow: 0 1px 0 0 $primary-color;
+   }
+
+   input[type=email]:not(.browser-default):focus:not([readonly])+label {
+     color: $primary-color;
+   }
+
+   input[type=password]:not(.browser-default):focus:not([readonly])+label {
+     color: $primary-color;
+   }
+
+.material-icons
+{
+  color: #9D9D9D;
+}
+
+.input-field .prefix.active
+{
+  color: $primary-color;
+}
+
+.btn-primary {
+  background-color:$primary-color;
+  border-color:$primary-color;
+}
+.btn-primary:hover {
+  border-color:$primary-color;
+}
+
+.btn-link{
+  color:$primary-color;
+}
+
+.btn-link:hover{
+  color:#FFF;
+  text-decoration: none;
+}
+.btn:hover{
+  background-color:$primary-color;
+
+}
+
+/*##################################################
+##############    DRAW BLADE       #################
+##################################################*/
+#draw-blade{
+  #top-col{
+    position: absolute;
+    top:5%;
+    right: 3%;
+  }
+  .align-item{display: inline; margin-right: 10px;}
+  #icon-bank{
+    display: inline;
+    background-color: #F3F3F3;
+    height: 5%;
+  }
+  #icon-bank-element{
+    font-size: 4em;
+    vertical-align: bottom;
+  }
+  .slider{height: auto !important;}
+  #drawing-mode-options{position: absolute; padding-top: 30px; }
+
+  #bottom-col{
+    position: absolute;
+    float: right;
+    right: 3%;
+    bottom:5%;
+  }
+
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #FBA82C;
+     box-shadow: 0 1px 0 0 #000;
+   }
+.input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FBA82C;
+  box-shadow: 0 1px 0 0 #000;
+
+}
 }

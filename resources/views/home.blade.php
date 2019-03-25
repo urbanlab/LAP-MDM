@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Vous êtes maintenant connecté !
 
                     @foreach ($folders as $folder)
                         <i class="material-icons medium">{{ $folder -> icon }}</i>

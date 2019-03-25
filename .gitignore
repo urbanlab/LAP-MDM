@@ -11,4 +11,4 @@ npm-debug.log
 yarn-error.log
 start.sh
 package-lock.json
-public/css
+public/css/*

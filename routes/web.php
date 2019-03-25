@@ -20,3 +20,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/draw', 'DrawController@index')->name('draw');
+
+Route::post('/folder/add', 'FolderController@add')->name('home');

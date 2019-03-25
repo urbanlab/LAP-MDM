@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Folder;
+use App\User;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,12 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $id = \Auth::user()->id;
+        $currentUser = User::find($id);
+        $folders = $currentUser->folders;
+        
+
+        return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+       // }
     }
 }

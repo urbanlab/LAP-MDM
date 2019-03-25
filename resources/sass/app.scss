@@ -84,3 +84,43 @@ body{
   background-color:$primary-color;
 
 }
+
+/*##################################################
+##############    DRAW BLADE       #################
+##################################################*/
+#draw-blade{
+  #top-col{
+    position: absolute;
+    top:5%;
+    right: 3%;
+  }
+  .align-item{display: inline; margin-right: 10px;}
+  #icon-bank{
+    display: inline;
+    background-color: #F3F3F3;
+    height: 5%;
+  }
+  #icon-bank-element{
+    font-size: 4em;
+    vertical-align: bottom;
+  }
+  .slider{height: auto !important;}
+  #drawing-mode-options{position: absolute; padding-top: 30px; }
+
+  #bottom-col{
+    position: absolute;
+    float: right;
+    right: 3%;
+    bottom:5%;
+  }
+
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #FBA82C;
+     box-shadow: 0 1px 0 0 #000;
+   }
+.input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FBA82C;
+  box-shadow: 0 1px 0 0 #000;
+
+}
+}

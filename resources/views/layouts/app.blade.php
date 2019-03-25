@@ -19,6 +19,10 @@
     <!-- Styles -->
     {!! MaterializeCSS::include_full() !!}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+
+
+
 </head>
 <body>
     <div id="app">
@@ -77,5 +81,8 @@
             @yield('content')
         </main>
     </div>
+
+
+            @yield('head')<!-- Chargement des scripts et tout -->
 </body>
 </html>

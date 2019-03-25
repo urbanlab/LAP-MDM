@@ -14,11 +14,11 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Vous êtes maintenant connecté !
 
                     {{$folders}}
 
-        
+
 
                 </div>
             </div>

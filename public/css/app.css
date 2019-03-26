@@ -10698,16 +10698,41 @@ a.text-dark:focus {
 #draw-blade #bottom-col {
   position: absolute;
   float: right;
+  /*float: right;
   right: 3%;
   bottom: 5%;
+  bottom:5%;*/
+  float: left;
+  left: 3%;
+  top: 5%;
 }
 
-#draw-blade .input-field input[type=text]:focus {
+#userBoard {
+  width: 100vw;
+  height: 100vh;
+}
+
+#userBoard #userBoard-left-col {
+  float: left;
+  width: 35%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+#userBoard #userBoard-right-col {
+  float: right;
+  width: 65%;
+  height: 100%;
+  background-color: #FFE53B;
+  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
+}
+
+.input-field input[type=text]:focus {
   border-bottom: 1px solid #FBA82C;
   box-shadow: 0 1px 0 0 #000;
 }
 
-#draw-blade .input[type=text]:not(.browser-default):focus:not([readonly]) {
+.input[type=text]:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid #FBA82C;
   box-shadow: 0 1px 0 0 #000;
 }

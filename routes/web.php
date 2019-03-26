@@ -20,3 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/draw', 'DrawController@index')->name('draw');
+
+Route::get('/userBoard', function(){
+   return view('userBoard');
+ });

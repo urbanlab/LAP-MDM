@@ -10,17 +10,19 @@
         <!-- <i class="material-icons">search</i> -->
         <ul>
           <li id="add-new"><i class="material-icons">add</i>Enregister une nouvelle personne</li>
-          <li>Sarah Liren <br> Prochain RDV : 30/04/19<button class="btn-floating btn-large right"><i class="material-icons right">nature_people</i></button></li>
-          <li>Marie Roy <br> Prochain RDV : 12/05/19<i class="material-icons right">nature_people</i></li>
-          <li>Émile Poulin <br> Prochain RDV : 20/05/19<i class="material-icons right">nature_people</i></li>
-          <li>Ariana Sficce <br> Prochain RDV : 31/05/19<i class="material-icons right">nature_people</i></li>
-          <li>Pierre Scaffidi <br> Prochain RDV : 03/06/19<i class="material-icons right">nature_people</i></li>
+          <li><p class="font-strong">Sarah Liren</p><br> Prochain RDV : 30/04/19<button class="btn-floating btn-large right"><i class="material-icons">nature_people</i></button></li>
+          <li><p class="font-strong">Marie Roy</p><br> Prochain RDV : 12/05/19<button class="btn-floating btn-large right"><i class="material-icons">nature_people</i></button></li>
+          <li><p class="font-strong">Émile Poulin</p><br> Prochain RDV : 20/05/19<button class="btn-floating btn-large right"><i class="material-icons">nature_people</i></button></li>
+          <li><p class="font-strong">Ariana Sficce</p><br> Prochain RDV : 31/05/19<button class="btn-floating btn-large right"><i class="material-icons">nature_people</i></button></li>
+          <li><p class="font-strong">Pierre Scaffidi</p><br> Prochain RDV : 03/06/19<button class="btn-floating btn-large right"><i class="material-icons">nature_people</i></button></li>
         </ul>
     </div>
   </div>
   <div id="userBoard-right-col">
-    <div>Déconnexion</div>
-    <div>Nom app</div>
+    <div class="top-content">
+      <div>Deconnexion</div>
+      <div>Nom app</div>
+    </div>
     <div>Logo</div>
   </div>
 

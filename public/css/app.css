@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);@charset "UTF-8";
 
 /*##################################################
 ##############    IMPORTS       #################
@@ -38,7 +38,7 @@
   --breakpoint-md: 768px;
   --breakpoint-lg: 992px;
   --breakpoint-xl: 1200px;
-  --font-family-sans-serif: "Nunito", sans-serif;
+  --font-family-sans-serif: "Open Sans", sans-serif;
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
@@ -70,7 +70,7 @@ section {
 
 body {
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 0.9rem;
   font-weight: 400;
   line-height: 1.6;
@@ -6145,7 +6145,7 @@ a.close.disabled {
   z-index: 1070;
   display: block;
   margin: 0;
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -6270,7 +6270,7 @@ a.close.disabled {
   z-index: 1060;
   display: block;
   max-width: 276px;
-  font-family: "Nunito", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 400;
   line-height: 1.6;
@@ -10672,6 +10672,7 @@ body {
   background-image: linear-gradient(#FF7660, #FDD093);
   background-repeat: no-repeat;
   height: 100vh;
+  font-size: 1em;
 }
 
 .logo {
@@ -10797,7 +10798,11 @@ h5 {
 }
 
 .font-light {
-  font-weight: lighter;
+  font-weight: 200;
+}
+
+.font-strong {
+  font-weight: 800;
 }
 
 /*##################################################
@@ -10861,6 +10866,7 @@ h5 {
 
 #userBoard #userBoard-left-col-content {
   padding-top: 15%;
+  height: 85%;
 }
 
 #userBoard input {
@@ -10872,9 +10878,11 @@ h5 {
 
 #userBoard ul {
   background-color: #FE9769;
-  border-radius: 15px;
+  border-radius: 5px 5px 0px 0px;
   margin-top: 5%;
   padding-top: 5%;
+  height: 71%;
+  overflow: scroll;
 }
 
 #userBoard li {
@@ -10882,12 +10890,26 @@ h5 {
   background-color: #FFFFFF;
   border-radius: 15px;
   padding: 2%;
+  color: #FE9769;
 }
 
 #userBoard #add-new {
-  padding: 5%;
+  padding: 4%;
   border: 2px solid #FFFFFF;
   background-color: #FE9769;
+  color: #FFFFFF;
+  font-weight: bold;
+}
+
+#userBoard #add-new i {
+  font-size: 3em;
+  color: #FFFFFF;
+  vertical-align: middle;
+}
+
+#userBoard button {
+  background-color: #FE9769;
+  margin-top: -7%;
 }
 
 #userBoard #userBoard-right-col {
@@ -10896,5 +10918,15 @@ h5 {
   height: 100%;
   background-color: #FFE53B;
   background-image: linear-gradient(#FF7660, #FDD093);
+}
+
+#userBoard .top-content {
+  width: 100%;
+  height: auto;
+  padding: 0% 10%;
+}
+
+#userBoard .top-content div {
+  display: inline;
 }
 

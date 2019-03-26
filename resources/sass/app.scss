@@ -2,7 +2,7 @@
 ##############    IMPORTS       #################
 ##################################################*/
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 // Variables
 @import 'variables';
@@ -22,6 +22,8 @@ body{
   background-image: linear-gradient(#FF7660, #FDD093), ;
   background-repeat:no-repeat;
   height: 100vh;
+
+  font-size: 1em;
 
 }
 .logo{
@@ -127,7 +129,10 @@ h5{
 }
 //------- Graisse
 .font-light{
-  font-weight:lighter;
+  font-weight:200;
+}
+.font-strong{
+  font-weight:800;
 }
 
 /*##################################################
@@ -175,6 +180,7 @@ h5{
   }
   #userBoard-left-col-content{
     padding-top: 15%;
+    height: 85%;
   }
   input{
     background-color: $secondary-color;
@@ -184,21 +190,30 @@ h5{
   }
   ul{
     background-color: $primary-color;
-    border-radius: 15px;
+    border-radius: 5px 5px 0px 0px;
     margin-top: 5%;
     padding-top: 5%;
+
+    height: 71%;
+    overflow: scroll;
   }
   li{
     margin: 0% 10% 4% 4% ;
     background-color: $clair;
     border-radius: 15px;
     padding: 2%;
+
+    color: $primary-color;
   }
   #add-new{
-    padding: 5%;
+    padding: 4%;
     border: 2px solid $clair;
     background-color: $primary-color;
+    color: $clair;
+    font-weight: bold;
   }
+  #add-new i{font-size: 3em;color: $clair;vertical-align: middle;}
+  button{background-color: $primary-color;margin-top: -7%;}
 
   #userBoard-right-col{
     float: right;
@@ -206,10 +221,15 @@ h5{
     height: 100%;
     background-color: #FFE53B;
     background-image: $gradient;
-
   }
-
-
+  .top-content{
+    width: 100%;
+    height: auto;
+    padding: 0% 10%;
+  }
+  .top-content div{
+    display: inline;
+  }
 
 
 

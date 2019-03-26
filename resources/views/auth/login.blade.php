@@ -6,6 +6,8 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
+                  <div class="logo"><img src="{{ url('media/logo.svg') }}">
+</div>
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 

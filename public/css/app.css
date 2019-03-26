@@ -10660,6 +10660,75 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+body {
+  background-image: linear-gradient(#FF7660, #FDD093);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.logo {
+  text-align: center;
+  width: 100%;
+}
+
+.logo img {
+  width: 50%;
+}
+
+input.invalid[type=email]:not(.browser-default),
+input.invalid[type=email]:not(.browser-default):focus {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+input[type=email]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+input[type=email]:not(.browser-default):focus:not([readonly]) + label {
+  color: #FE9769;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) + label {
+  color: #FE9769;
+}
+
+.material-icons {
+  color: #9D9D9D;
+}
+
+.input-field .prefix.active {
+  color: #FE9769;
+}
+
+.btn-primary {
+  background-color: #FE9769;
+  border-color: #FE9769;
+}
+
+.btn-primary:hover {
+  border-color: #FE9769;
+}
+
+.btn-link {
+  color: #FE9769;
+}
+
+.btn-link:hover {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background-color: #FE9769;
+}
+
 /*##################################################
 ##############    DRAW BLADE       #################
 ##################################################*/

@@ -1,6 +1,6 @@
-
-
-
+/*##################################################
+##############    IMPORTS       #################
+##################################################*/
 // Fonts
 @import url('https://fonts.googleapis.com/css?family=Nunito');
 
@@ -10,6 +10,9 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
+/*##################################################
+##############      GENERAL       ##################
+##################################################*/
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -52,7 +55,15 @@ body{
   width: 40%;
 }
 
+input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
+ border-bottom: 1px solid $primary-color;
+ box-shadow: 0 1px 0 0 $primary-color;
+}
 
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+ border-bottom: 1px solid $primary-color;
+ box-shadow: 0 1px 0 0 $primary-color;
+}
 .popup {
   display: none;
   position: fixed;
@@ -76,18 +87,18 @@ body{
      box-shadow: 0 1px 0 0 $primary-color;
    }
 
-   input[type=email]:not(.browser-default):focus:not([readonly]) {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
-   }
+input[type=email]:not(.browser-default):focus:not([readonly]) {
+ border-bottom: 1px solid $primary-color;
+ box-shadow: 0 1px 0 0 $primary-color;
+}
 
-   input[type=email]:not(.browser-default):focus:not([readonly])+label {
-     color: $primary-color;
-   }
+input[type=email]:not(.browser-default):focus:not([readonly])+label {
+ color: $primary-color;
+}
 
-   input[type=password]:not(.browser-default):focus:not([readonly])+label {
-     color: $primary-color;
-   }
+input[type=password]:not(.browser-default):focus:not([readonly])+label {
+ color: $primary-color;
+}
 
    input[type=text]:not(.browser-default):focus:not([readonly]) {
      border-bottom: 1px solid $primary-color;
@@ -124,6 +135,49 @@ body{
   background-color:$primary-color;
 
 }
+.input-field input[type=text]:focus {
+     border-bottom: 1px solid #FBA82C;
+     box-shadow: 0 1px 0 0 #000;
+   }
+.input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FBA82C;
+  box-shadow: 0 1px 0 0 #000;
+
+}
+::placeholder{color: $clair;}
+//////////////////////FONTS/////////////////////////
+//------- taille
+h1{
+  font-size: 3.5em;
+  font-weight: bold;
+}
+h2{
+  font-size: 3em;
+  font-weight: bold;
+}
+h3{
+  font-size: 2.5em;
+  font-weight: bold;
+}
+h4{
+  font-size: 2em;
+  font-weight: bold;
+}
+h5{
+  font-size: 1.5em;
+  font-weight: bold;
+}
+//------- Couleurs
+.clair{
+  color: $clair;
+}
+.fonce{
+  color: $fonce;
+}
+//------- Graisse
+.font-light{
+  font-weight:lighter;
+}
 
 /*##################################################
 ##############    DRAW BLADE       #################
@@ -132,7 +186,7 @@ body{
   #top-col{
     position: absolute;
     top:5%;
-    right: 3%;
+    right:3%;
   }
   .align-item{display: inline; margin-right: 10px;}
   #icon-bank{
@@ -149,18 +203,63 @@ body{
 
   #bottom-col{
     position: absolute;
-    float: right;
-    right: 3%;
-    bottom:5%;
+    left:3%;
+    top:5%;
+  }
+}
+/*##################################################
+##############    USER BOARD       #################
+##################################################*/
+#userBoard{
+    width: 100vw;
+    height: 100vh;
+    font-size: 1.4em;
+
+  #userBoard-left-col{
+    float: left;
+    width: 35%;
+    height: 100%;
+    background-color: #ffffff;
+    padding: 2% 2% 0% 2%;
+  }
+  #userBoard-left-col-content{
+    padding-top: 15%;
+  }
+  input{
+    background-color: $secondary-color;
+    border-radius: 50px;
+    text-align: center;
+    margin-top: 5%;
+  }
+  ul{
+    background-color: $primary-color;
+    border-radius: 15px;
+    margin-top: 5%;
+    padding-top: 5%;
+  }
+  li{
+    margin: 0% 10% 4% 4% ;
+    background-color: $clair;
+    border-radius: 15px;
+    padding: 2%;
+  }
+  #add-new{
+    padding: 5%;
+    border: 2px solid $clair;
+    background-color: $primary-color;
   }
 
-.input-field input[type=text]:focus {
-     border-bottom: 1px solid #FBA82C;
-     box-shadow: 0 1px 0 0 #000;
-   }
-.input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #FBA82C;
-  box-shadow: 0 1px 0 0 #000;
+  #userBoard-right-col{
+    float: right;
+    width: 65%;
+    height: 100%;
+    background-color: #FFE53B;
+    background-image: $gradient;
 
-}
+  }
+
+
+
+
+
 }

@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
 
+/*##################################################
+##############    IMPORTS       #################
+##################################################*/
+
 /*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
@@ -10655,6 +10659,10 @@ a.text-dark:focus {
   }
 }
 
+/*##################################################
+##############      GENERAL       ##################
+##################################################*/
+
 .navbar-laravel {
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
@@ -10666,13 +10674,48 @@ body {
   height: 100vh;
 }
 
+.auth .card-header {
+  background-color: white;
+  border-bottom: 0px;
+  font-size: 2em;
+  color: #FE9769;
+}
+
+.auth .card-body {
+  padding-bottom: 10%;
+}
+
+.auth button {
+  display: block;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.auth .input-field {
+  margin: auto;
+  margin-top: 4%;
+}
+
 .logo {
   text-align: center;
   width: 100%;
 }
 
 .logo img {
-  width: 50%;
+  width: 40%;
+}
+
+input.invalid[type=email]:not(.browser-default),
+input.invalid[type=email]:not(.browser-default):focus {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
 }
 
 .popup {
@@ -10712,6 +10755,11 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label {
   color: #FE9769;
 }
 
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
 .material-icons {
   color: #9D9D9D;
 }
@@ -10740,6 +10788,69 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label {
 
 .btn:hover {
   background-color: #FE9769;
+}
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #FBA82C;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+.input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FBA82C;
+  box-shadow: 0 1px 0 0 #000;
+}
+
+::-webkit-input-placeholder {
+  color: #FFFFFF;
+}
+
+:-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+::-ms-input-placeholder {
+  color: #FFFFFF;
+}
+
+::placeholder {
+  color: #FFFFFF;
+}
+
+h1 {
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3em;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.clair {
+  color: #FFFFFF;
+}
+
+.fonce {
+  color: #FF7660;
+}
+
+.font-light {
+  font-weight: lighter;
 }
 
 /*##################################################
@@ -10779,18 +10890,64 @@ input[type=password]:not(.browser-default):focus:not([readonly]) + label {
 
 #draw-blade #bottom-col {
   position: absolute;
+  left: 3%;
+  top: 5%;
+}
+
+/*##################################################
+##############    USER BOARD       #################
+##################################################*/
+
+#userBoard {
+  width: 100vw;
+  height: 100vh;
+  font-size: 1.4em;
+}
+
+#userBoard #userBoard-left-col {
+  float: left;
+  width: 35%;
+  height: 100%;
+  background-color: #ffffff;
+  padding: 2% 2% 0% 2%;
+}
+
+#userBoard #userBoard-left-col-content {
+  padding-top: 15%;
+}
+
+#userBoard input {
+  background-color: #FEDBB9;
+  border-radius: 50px;
+  text-align: center;
+  margin-top: 5%;
+}
+
+#userBoard ul {
+  background-color: #FE9769;
+  border-radius: 15px;
+  margin-top: 5%;
+  padding-top: 5%;
+}
+
+#userBoard li {
+  margin: 0% 10% 4% 4%;
+  background-color: #FFFFFF;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+#userBoard #add-new {
+  padding: 5%;
+  border: 2px solid #FFFFFF;
+  background-color: #FE9769;
+}
+
+#userBoard #userBoard-right-col {
   float: right;
-  right: 3%;
-  bottom: 5%;
-}
-
-#draw-blade .input-field input[type=text]:focus {
-  border-bottom: 1px solid #FBA82C;
-  box-shadow: 0 1px 0 0 #000;
-}
-
-#draw-blade .input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #FBA82C;
-  box-shadow: 0 1px 0 0 #000;
+  width: 65%;
+  height: 100%;
+  background-color: #FFE53B;
+  background-image: linear-gradient(#FF7660, #FDD093);
 }
 

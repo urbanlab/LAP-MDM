@@ -21,6 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/draw', 'DrawController@index')->name('draw');
 
+Route::get('/userBoard', function(){
+   return view('userBoard');
+ });
 // Folder Routes
 Route::post('/folder/add', 'FolderController@add')->name('home');
 Route::post('/folder/update/{id}', 'FolderController@update')->name('home');

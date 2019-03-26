@@ -1,7 +1,7 @@
 /node_modules
 /public/hot
 /public/storage
-/public/css
+/public/css/*
 /storage/*.key
 /vendor
 .env
@@ -13,3 +13,5 @@ yarn-error.log
 composer.lock
 package-lock.json
 
+public/css/app.css
+public/js/app.js

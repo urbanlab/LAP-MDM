@@ -10,7 +10,6 @@
     <title>{{ config('app.name', "Livret d'Accompagnement Personnalisé") }}</title>
 
     <!-- Scripts -->
-    {!! MaterializeCSS::include_js() !!}
     <script src="{{ asset('js/app.js') }}" defer></script>
     
 
@@ -19,8 +18,10 @@
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    {!! MaterializeCSS::include_full() !!}
+    {!! MaterializeCSS::include_all() !!}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    
 
 
 
@@ -86,5 +87,6 @@
 
 
             @yield('head')<!-- Chargement des scripts et tout -->
+            
 </body>
 </html>

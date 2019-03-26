@@ -12,13 +12,16 @@
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-    {!! MaterializeCSS::include_full() !!}
+    {!! MaterializeCSS::include_all() !!}
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    
 
 
 
@@ -50,7 +53,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __("S'ldkzdjisinscrire") }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __("S'inscrire") }}</a>
                                 </li>
                             @endif
                         @else
@@ -84,5 +87,6 @@
 
 
             @yield('head')<!-- Chargement des scripts et tout -->
+            
 </body>
 </html>

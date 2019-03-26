@@ -49032,6 +49032,19 @@ Vue.component('example-component', __webpack_require__(/*! ./components/ExampleC
 var app = new Vue({
   el: '#app'
 });
+$('.popup-trigger').click(function () {
+  if (!$(this).hasClass('active')) {
+    id = $(this).data('id');
+    console.log(id);
+    $('#popup' + id).addClass('active');
+  }
+});
+$('.popup-close').click(function () {
+  id = $(this).data('id');
+  $('#popup' + id).removeClass('active');
+}); //$('.modal').modal();
+
+console.log('MODAL');
 
 /***/ }),
 
@@ -49180,8 +49193,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /Users/methio/Documents/COURS/P5-remix/LAP-MDM/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /Users/methio/Documents/COURS/P5-remix/LAP-MDM/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/yassin/Documents/workshop/LAP-MDM/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/yassin/Documents/workshop/LAP-MDM/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

@@ -10674,13 +10674,61 @@ body {
   height: 100vh;
 }
 
+.auth .card-header {
+  background-color: white;
+  border-bottom: 0px;
+  font-size: 2em;
+  color: #FE9769;
+}
+
+.auth .card-body {
+  padding-bottom: 10%;
+}
+
+.auth button {
+  display: block;
+  margin: auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.auth .input-field {
+  margin: auto;
+  margin-top: 4%;
+}
+
 .logo {
   text-align: center;
   width: 100%;
 }
 
 .logo img {
-  width: 50%;
+  width: 40%;
+}
+
+input.invalid[type=email]:not(.browser-default),
+input.invalid[type=email]:not(.browser-default):focus {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+input[type=password]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  background: white;
+  bottom: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.popup.active {
+  display: block;
 }
 
 input.invalid[type=email]:not(.browser-default),
@@ -10705,6 +10753,11 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label {
 
 input[type=password]:not(.browser-default):focus:not([readonly]) + label {
   color: #FE9769;
+}
+
+input[type=text]:not(.browser-default):focus:not([readonly]) {
+  border-bottom: 1px solid #FE9769;
+  box-shadow: 0 1px 0 0 #FE9769;
 }
 
 .material-icons {

@@ -13,9 +13,12 @@ class CreateFolderTable extends Migration
      */
     public function up()
     {
-        Schema::create('folder', function (Blueprint $table) {
+        Schema::create('folders', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('title');
+            $table->string('dsc');
+            $table->json('media')->nullable();
             $table->string('icon');
             $table->integer('user_id')->unsigned();
 

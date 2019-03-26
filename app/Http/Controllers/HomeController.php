@@ -28,8 +28,6 @@ class HomeController extends Controller
         $id = \Auth::user()->id;
         $currentUser = User::find($id);
         $folders = $currentUser->folders;
-        
-
         return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
        // }
     }

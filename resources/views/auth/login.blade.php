@@ -1,13 +1,14 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container auth">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
                 <div class="card-body">
                   <div class="logo"><img src="{{ url('media/logo.svg') }}">
 </div>
+
                     <form method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -37,30 +38,20 @@
                                 @endif
                             </div>
                         </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Se souvenir de moi') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
                         <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
+                            <div class="col m10">
+                              <div class="col m6 push-m1">
                                 <button type="submit" class="waves-effect waves-light btn btn-primary">
                                     {{ __('Accéder à mon espace') }}
                                 </button>
-
+                              </div>
+                              <div class="col m6 button">
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Mot de passe oublié ?') }}
                                     </a>
                                 @endif
+                              </div>
                             </div>
                         </div>
                     </form>

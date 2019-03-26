@@ -17,7 +17,10 @@
                     Vous êtes maintenant connecté !
 
                     @foreach ($folders as $folder)
-                        <i class="material-icons medium">{{ $folder -> icon }}</i>
+                        <a class="waves-effect waves-light btn popup-trigger" href="#modal{{$folder->id}}" data-id="{{$folder->id}}">
+                            <i class="material-icons medium">{{ $folder -> icon }}</i>
+                        </a>
+                        <a href="folder/delete/{{$folder->id}}"><i class="material-icons little">close</i></a>
                     @endforeach
 
                     <?php
@@ -33,17 +36,52 @@
 
                             echo Form::textarea('user_id', $currentUser->id);
                             echo '<br/>';
-                    
-                            //echo Form::select('objectives',  array('obj1' => 'obj1', 'obj2' => 'obj2', 'obj3' => 'obj3'), null, ['class' => 'form-control']);
                             
                             echo Form::submit('Ajouter au parcours');
                         echo Form::close();
-                    ?>
-   
-
+                    ?>    
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+@if ($currentUser->state === 0)                     
+    @foreach ($folders as $folder)
+    <div id="popup{{$folder->id}}" class="popup">
+        <a data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
+        <div class="modal-content">
+            <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
+            <p>A bunch of text</p>
+        </div>
+    </div> 
+    @endforeach
+@endif
+
+@if ($currentUser->state === 1)
+    @foreach ($folders as $folder)
+    <div id="popup{{$folder->id}}" class="popup">
+        <a href="#!" data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
+        <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
+        <?php
+            echo Form::open(array('url' => 'folder/update/$folder->id'));
+                echo Form::text('title',$folder->title);
+                echo '<br/>';
+
+                echo Form::text('icon',$folder->icon);
+                echo '<br/>';
+                
+                echo Form::textarea('dsc', $folder->dsc);
+                echo '<br/>';
+
+                echo Form::textarea('user_id', $currentUser->id);
+                echo '<br/>';
+                
+                echo Form::submit('Mettre à jour');
+            echo Form::close();
+        ?>
+    </div>
+    @endforeach
+@endif
+
 @endsection

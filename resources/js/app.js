@@ -7,6 +7,7 @@
 
 require('./bootstrap');
 
+
 window.Vue = require('vue');
 
 /**
@@ -32,4 +33,19 @@ const app = new Vue({
     el: '#app'
 });
 
-$('.modal').modal();
+
+    $('.popup-trigger').click(function(){
+        if(!$(this).hasClass('active')){
+            id = $(this).data('id');
+            console.log(id);
+            $('#popup'+id).addClass('active');
+        }
+       
+    });
+    $('.popup-close').click(function(){
+        id = $(this).data('id');
+        $('#popup'+id).removeClass('active');
+    });
+    
+    //$('.modal').modal();
+    console.log('MODAL');

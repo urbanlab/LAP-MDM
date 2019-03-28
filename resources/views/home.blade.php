@@ -34,17 +34,21 @@
                           </a>
                         </div>
                         <div class="mission-info-supp">{{$folder->title}}</div>
-                        <a class="deleteMission" href="folder/delete/{{$folder->id}}"><i class="material-icons little">close</i></a>
+                        @if ($currentUser->state === 1)  
+                            <a href="{{ url('') }}/folder/delete/{{$folder->id}}/{{$userId}}"><i class="material-icons little">close</i></a>
+                        @endif
                     </div>
                     @endforeach
 
+                    @if ($currentUser->state === 1) 
                     <!-- nouvelle mission-->
                     <div class="addNewMission">
-                      <a class="btn-floating btn-large waves-effect waves-light popup-trigger" href="fichier draw">
+                      <a class="btn-floating btn-large waves-effect waves-light popup-trigger" >
                           <i class="material-icons medium">add</i>
                       </a>
+                      <div class="add_folder">
                       <?php
-                          echo Form::open(array('url' => 'folder/add'));
+                           echo Form::open(array('url' => 'folder/add/'.$userId));
                               echo Form::text('title','Titre');
                               echo '<br/>';
 
@@ -54,13 +58,15 @@
                               echo Form::textarea('dsc', 'description');
                               echo '<br/>';
 
-                              echo Form::textarea('user_id', $currentUser->id);
+                              echo Form::textarea('user_id', $userId);
                               echo '<br/>';
 
                               echo Form::submit('Ajouter au parcours');
                           echo Form::close();
                       ?>
+                      </div>
                     </div>
+                    @endif
                 </div>
                 <!--
             </div>
@@ -73,13 +79,12 @@
     <div id="popup{{$folder->id}}" class="popup">
         <a data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
         <div class="modal-content">
-            <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
+            <h4><i class="material-icons medium">{{$folder->icon}}</i>{{$folder->title}}</h4>
             <p>A bunch of text</p>
         </div>
     </div>
     @endforeach
 @endif
-
 @if ($currentUser->state === 1)
     @foreach ($folders as $folder)
     <div id="popup{{$folder->id}}" class="popup">
@@ -96,7 +101,7 @@
                 echo Form::textarea('dsc', $folder->dsc);
                 echo '<br/>';
 
-                echo Form::textarea('user_id', $currentUser->id);
+                echo Form::textarea('user_id', $userId);
                 echo '<br/>';
 
                 echo Form::submit('Mettre à jour');

@@ -10,8 +10,10 @@ class UserBoardController extends Controller
 {
     public function index()
     {
+        $userId = \Auth::user()->id;
+        $currentUser = User::find($userId);
         $users = User::all();
-        return view('userBoard',["users"=>$users]);
+        return view('userBoard',["users"=>$users],["currentUser"=>$currentUser]);
        // }
     }
 }

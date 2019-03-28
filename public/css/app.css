@@ -10846,7 +10846,7 @@ h5 {
 
 #draw-blade #top-col {
   position: absolute;
-  top: 5%;
+  top: 25%;
   right: 3%;
 }
 
@@ -10878,7 +10878,7 @@ h5 {
 #draw-blade #bottom-col {
   position: absolute;
   left: 3%;
-  top: 5%;
+  top: 25%;
 }
 
 /*##################################################
@@ -11024,11 +11024,19 @@ h5 {
 }
 
 #homeBlade .popup {
-  position: absolute;
-  width: 60%;
-  margin: 20%;
+  position: fixed;
   padding: 4%;
+  width: 100%;
   border: 5px solid #FE9769;
+  border-radius: 10px;
+}
+
+#homeBlade .add_folder {
+  position: relative;
+  bottom: 27px;
+  left: 34px;
+  background: #aaaaaa;
+  padding: 15px;
   border-radius: 10px;
 }
 

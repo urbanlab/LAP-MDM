@@ -2,7 +2,7 @@
 
 @section('head')
 <script src="{{ asset('js/fabric.min.js') }}" defer></script>
-
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
 $(function () {
   var canvas;
@@ -63,8 +63,26 @@ function saveImage() {
     // transforme en png que pour chrome
     var link = document.createElement('a');
     link.download = "schema-sauvegarde.png";
-    link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
-    link.click();
+
+    var dataURL = canvas.toDataURL("image/png");
+    $.ajax({
+    headers: {
+      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+    },
+    type: "POST",
+    url: "/draw",
+    data: { 
+        imgBase64: 'dataURL'
+    }
+    }).done(function(o) {
+        console.log('saved'); 
+
+        // Do here whatever you want.
+    });
+
+
+    //link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
+    //link.click();
 };
 </script>
 @endsection
@@ -95,7 +113,7 @@ function saveImage() {
 
     <div id="bottom-col">
       <button id="send-btn" class="btn-floating btn-large align-item" type="submit" name="action"><i class="material-icons right">send</i></button>
-      <button id="save-btn" class="btn-floating btn-large align-item" onclick="saveImage()"><i class="material-icons right">save</i></button>
+      <a href="/home/{{$id}}"><button id="save-btn" class="btn-floating btn-large align-item" onclick="saveImage()"><i class="material-icons right">save</i></button></a>
     </div>
 </div><!-- end draw blade div -->
 @endsection

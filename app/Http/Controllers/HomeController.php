@@ -23,19 +23,50 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id= null)
+    public function index($id = null)
     {
+        $userId = \Auth::user()->id;
+        $currentUser = User::find($userId);
+
         if($id){
-            $currentUser = User::find($id);
-            $folders = $currentUser->folders;
-            return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+            $selectedUser = User::find($id);
+            $folders = $selectedUser->folders;
+            $userId = $id;
+            return view('home',compact('currentUser', 'folders', 'userId'));
         }
         else {
+            if($currentUser->state == 1){
+                $users = User::all();
+                return view('userBoard',["users"=>$users], ["currentUser"=>$currentUser]);
+            }
+            else{
             $userId = \Auth::user()->id;
             $currentUser = User::find($userId);
             $folders = $currentUser->folders;
             return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+            }
         }
+        
+       // }
+    }
+
+    public function index2()
+    {
+        $userId = \Auth::user()->id;
+        $currentUser = User::find($userId);
+
+
+        if($currentUser->state == 1){
+            $users = User::all();
+            return view('userBoard',["users"=>$users], ["currentUser"=>$currentUser]);
+        }
+        else{
+        $userId = \Auth::user()->id;
+        $currentUser = User::find($userId);
+        $folders = $currentUser->folders;
+        return view('home',compact('currentUser', 'folders', 'userId'));
+        }
+        
         
        // }
     }

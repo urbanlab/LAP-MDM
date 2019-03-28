@@ -176,7 +176,7 @@ h5{
 #draw-blade{
   #top-col{
     position: absolute;
-    top:5%;
+    top:25%;
     right:3%;
   }
   .align-item{display: inline; margin-right: 10px;}
@@ -195,7 +195,7 @@ h5{
   #bottom-col{
     position: absolute;
     left:3%;
-    top:5%;
+    top:25%;
   }
 }
 /*##################################################
@@ -303,13 +303,22 @@ h5{
     position: absolute;
   }
   .popup{
-    position: absolute;
-    width: 60%;
-    margin: 20%;
+    position: fixed;
     padding: 4%;
+    width: 100%;
     border: 5px solid $primary-color;
     border-radius:10px;
   }
+
+  .add_folder {
+    position: relative;
+    bottom: 27px;
+    left: 34px;
+    background: #aaaaaa;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
 }
 @media screen and (max-width: 640px){
 #homeBlade{
@@ -322,6 +331,7 @@ h5{
     height: 80px;
   }
 
+ 
 
 
 }

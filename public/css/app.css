@@ -10672,7 +10672,6 @@ body {
   background-image: linear-gradient(#FF7660, #FDD093);
   background-repeat: no-repeat;
   height: 100vh;
-  font-size: 1em;
 }
 
 .auth .card-header {
@@ -10704,10 +10703,6 @@ body {
   width: 100%;
 }
 
-.logo img {
-  width: 40%;
-}
-
 input.invalid[type=email]:not(.browser-default),
 input.invalid[type=email]:not(.browser-default):focus {
   border-bottom: 1px solid #FE9769;
@@ -10732,17 +10727,6 @@ input[type=password]:not(.browser-default):focus:not([readonly]) {
   display: block;
 }
 
-input.invalid[type=email]:not(.browser-default),
-input.invalid[type=email]:not(.browser-default):focus {
-  border-bottom: 1px solid #FE9769;
-  box-shadow: 0 1px 0 0 #FE9769;
-}
-
-input[type=password]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #FE9769;
-  box-shadow: 0 1px 0 0 #FE9769;
-}
-
 input[type=email]:not(.browser-default):focus:not([readonly]) {
   border-bottom: 1px solid #FE9769;
   box-shadow: 0 1px 0 0 #FE9769;
@@ -10754,11 +10738,6 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label {
 
 input[type=password]:not(.browser-default):focus:not([readonly]) + label {
   color: #FE9769;
-}
-
-input[type=text]:not(.browser-default):focus:not([readonly]) {
-  border-bottom: 1px solid #FE9769;
-  box-shadow: 0 1px 0 0 #FE9769;
 }
 
 .material-icons {

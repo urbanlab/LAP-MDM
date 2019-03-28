@@ -40,15 +40,9 @@ body{
   margin: auto;
   width: max-content;
 }
-
-<<<<<<< HEAD
-  font-size: 1em;
-
-=======
 .auth .input-field{
   margin: auto;
   margin-top: 4%;
->>>>>>> 1755afe5494b0ed2a3c77b22f9d02d3a2e951c77
 }
 
 .logo{
@@ -76,20 +70,12 @@ input[type=password]:not(.browser-default):focus:not([readonly]) {
   width: 100vw;
   z-index: 999;
 }
- 
+
 .popup.active {
   display: block;
 }
 
-   input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
-   }
 
-   input[type=password]:not(.browser-default):focus:not([readonly]) {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
-   }
 
 input[type=email]:not(.browser-default):focus:not([readonly]) {
  border-bottom: 1px solid $primary-color;
@@ -102,11 +88,6 @@ input[type=email]:not(.browser-default):focus:not([readonly])+label {
 
 input[type=password]:not(.browser-default):focus:not([readonly])+label {
  color: $primary-color;
-}
-
-   input[type=text]:not(.browser-default):focus:not([readonly]) {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
 }
 
 .material-icons

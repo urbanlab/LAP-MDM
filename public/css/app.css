@@ -10699,6 +10699,39 @@ body {
   width: 40%;
 }
 
+.popup {
+  display: none;
+  position: fixed;
+  background: white;
+  bottom: 0;
+  width: 100vw;
+  z-index: 999;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup-trigger {
+  background-color: #FE9769;
+  border-radius: 50%;
+}
+
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus {
+  background-color: #FEDBB9;
+  border: 1px solid;
+}
+
+.btn:focus,
+.btn-large:focus,
+.btn-small:focus,
+.btn-floating:focus i {
+  color: #FE9769;
+}
+
 input.invalid[type=email]:not(.browser-default),
 input.invalid[type=email]:not(.browser-default):focus {
   border-bottom: 1px solid #FE9769;

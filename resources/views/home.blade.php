@@ -17,7 +17,7 @@
                     Vous êtes maintenant connecté !
 
                     @foreach ($folders as $folder)
-                        <a class="waves-effect waves-light btn popup-trigger" href="#modal{{$folder->id}}" data-id="{{$folder->id}}">
+                        <a class="btn-floating btn-large waves-effect waves-light btn popup-trigger" href="#modal{{$folder->id}}" data-id="{{$folder->id}}">
                             <i class="material-icons medium">{{ $folder -> icon }}</i>
                         </a>
                         <a href="folder/delete/{{$folder->id}}"><i class="material-icons little">close</i></a>
@@ -30,23 +30,23 @@
 
                             echo Form::text('icon','ac_unit');
                             echo '<br/>';
-                            
+
                             echo Form::textarea('dsc', 'description');
                             echo '<br/>';
 
                             echo Form::textarea('user_id', $currentUser->id);
                             echo '<br/>';
-                            
+
                             echo Form::submit('Ajouter au parcours');
                         echo Form::close();
-                    ?>    
+                    ?>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-@if ($currentUser->state === 0)                     
+@if ($currentUser->state === 0)
     @foreach ($folders as $folder)
     <div id="popup{{$folder->id}}" class="popup">
         <a data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
@@ -54,7 +54,7 @@
             <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
             <p>A bunch of text</p>
         </div>
-    </div> 
+    </div>
     @endforeach
 @endif
 
@@ -70,13 +70,13 @@
 
                 echo Form::text('icon',$folder->icon);
                 echo '<br/>';
-                
+
                 echo Form::textarea('dsc', $folder->dsc);
                 echo '<br/>';
 
                 echo Form::textarea('user_id', $currentUser->id);
                 echo '<br/>';
-                
+
                 echo Form::submit('Mettre à jour');
             echo Form::close();
         ?>

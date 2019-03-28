@@ -3,7 +3,7 @@
 @section('content')
 <div id="userBoard">
   <div id="userBoard-left-col">
-    <h1 class="fonce">Bonjour,<br>John Doe</h1>
+    <h1 class="fonce">Bonjour,<br>{{$currentUser->name}}</h1>
     <div id="userBoard-left-col-content">
         <h4 class="fonce"> Liste des personnes</h4>
         <input type="text" class="font-light" placeholder="saisir le nom de vos usagers &#8981;"></input>

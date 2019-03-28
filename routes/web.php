@@ -20,10 +20,12 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/home/{id}', 'HomeController@index')->name('home');
 
-Route::get('/draw', 'DrawController@index')->name('draw');
+/*Route::get('/draw', 'DrawController@index')->name('draw');
+Route::post('/draw', 'DrawController@saveImage')->name('draw');*/
 
 Route::get('/userBoard', 'UserBoardController@index')->name('draw');
+
 // Folder Routes
-Route::post('/folder/add', 'FolderController@add')->name('home');
+Route::post('/folder/add/{id}', 'FolderController@add')->name('home');
 Route::post('/folder/update/{id}', 'FolderController@update')->name('home');
-Route::get('/folder/delete/{id}', 'FolderController@delete')->name('home');
+Route::get('/folder/delete/{id}/{userId}', 'FolderController@delete')->name('home');

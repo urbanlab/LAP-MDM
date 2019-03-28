@@ -14,17 +14,19 @@
                         </div>
                     @endif
 
-                    Vous êtes maintenant connecté !
-
+                    
                     @foreach ($folders as $folder)
                         <a class="waves-effect waves-light btn popup-trigger" href="#modal{{$folder->id}}" data-id="{{$folder->id}}">
                             <i class="material-icons medium">{{ $folder -> icon }}</i>
                         </a>
-                        <a href="folder/delete/{{$folder->id}}"><i class="material-icons little">close</i></a>
+                        @if ($currentUser->state === 1)  
+                            <a href="{{ url('') }}/folder/delete/{{$folder->id}}/{{$userId}}"><i class="material-icons little">close</i></a>
+                        @endif
                     @endforeach
-
+                    TEST {{$userId}}
+                    @if ($currentUser->state === 1)  
                     <?php
-                        echo Form::open(array('url' => 'folder/add'));
+                        echo Form::open(array('url' => 'folder/add/'.$userId));
                             echo Form::text('title','Titre');
                             echo '<br/>';
 
@@ -37,9 +39,12 @@
                             echo Form::textarea('user_id', $currentUser->id);
                             echo '<br/>';
                             
+                            //echo Form::select('brands', array('Brands' => 'RRR' ), null, ['tabindex' => '1', 'class' => 'span4']) ;
+
                             echo Form::submit('Ajouter au parcours');
                         echo Form::close();
-                    ?>    
+                    ?>
+                    @endif    
                 </div>
             </div>
         </div>
@@ -51,18 +56,17 @@
     <div id="popup{{$folder->id}}" class="popup">
         <a data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
         <div class="modal-content">
-            <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
+            <h4><i class="material-icons medium">{{$folder->icon}}</i>{{$folder->title}}</h4>
             <p>A bunch of text</p>
         </div>
     </div> 
     @endforeach
 @endif
-
 @if ($currentUser->state === 1)
     @foreach ($folders as $folder)
     <div id="popup{{$folder->id}}" class="popup">
         <a href="#!" data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
-        <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
+        <h4><i class="material-icons medium">{{$folder->icon}}</i>{{$folder->title}}</h4>
         <?php
             echo Form::open(array('url' => 'folder/update/'.$folder->id));
                 echo Form::text('title',$folder->title);

@@ -49045,6 +49045,12 @@ $('.popup-close').click(function () {
 }); //$('.modal').modal();
 
 console.log('MODAL');
+$(".newMission").hover(function () {
+  $(".deleteMission").css("display", "inline");
+});
+$(".newMission").mouseout(function () {
+  $(".deleteMission").css("display", "none");
+});
 
 /***/ }),
 

@@ -40,12 +40,19 @@ const app = new Vue({
             console.log(id);
             $('#popup'+id).addClass('active');
         }
-       
+
     });
     $('.popup-close').click(function(){
         id = $(this).data('id');
         $('#popup'+id).removeClass('active');
     });
-    
+
     //$('.modal').modal();
     console.log('MODAL');
+
+    $(".newMission").hover(function(){
+      $(".deleteMission").css("display","inline");
+    });
+    $(".newMission").mouseout(function(){
+      $(".deleteMission").css("display","none");
+    });

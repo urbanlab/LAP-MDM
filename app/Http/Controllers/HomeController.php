@@ -23,12 +23,20 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($id= null)
     {
-        $id = \Auth::user()->id;
-        $currentUser = User::find($id);
-        $folders = $currentUser->folders;
-        return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+        if($id){
+            $currentUser = User::find($id);
+            $folders = $currentUser->folders;
+            return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+        }
+        else {
+            $userId = \Auth::user()->id;
+            $currentUser = User::find($userId);
+            $folders = $currentUser->folders;
+            return view('home',["currentUser"=>$currentUser], ["folders"=>$folders]);
+        }
+        
        // }
     }
 }

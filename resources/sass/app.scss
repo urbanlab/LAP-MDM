@@ -2,7 +2,7 @@
 ##############    IMPORTS       #################
 ##################################################*/
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 // Variables
 @import 'variables';
@@ -40,7 +40,6 @@ body{
   margin: auto;
   width: max-content;
 }
-
 .auth .input-field{
   margin: auto;
   margin-top: 4%;
@@ -52,7 +51,6 @@ body{
 }
 
 .logo img{
-  width: 40%;
 }
 
 input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
@@ -72,20 +70,12 @@ input[type=password]:not(.browser-default):focus:not([readonly]) {
   width: 100vw;
   z-index: 999;
 }
- 
+
 .popup.active {
   display: block;
 }
 
-   input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
-   }
 
-   input[type=password]:not(.browser-default):focus:not([readonly]) {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
-   }
 
 input[type=email]:not(.browser-default):focus:not([readonly]) {
  border-bottom: 1px solid $primary-color;
@@ -98,11 +88,6 @@ input[type=email]:not(.browser-default):focus:not([readonly])+label {
 
 input[type=password]:not(.browser-default):focus:not([readonly])+label {
  color: $primary-color;
-}
-
-   input[type=text]:not(.browser-default):focus:not([readonly]) {
-     border-bottom: 1px solid $primary-color;
-     box-shadow: 0 1px 0 0 $primary-color;
 }
 
 .material-icons
@@ -176,7 +161,10 @@ h5{
 }
 //------- Graisse
 .font-light{
-  font-weight:lighter;
+  font-weight:200;
+}
+.font-strong{
+  font-weight:800;
 }
 
 /*##################################################
@@ -224,6 +212,7 @@ h5{
   }
   #userBoard-left-col-content{
     padding-top: 15%;
+    height: 85%;
   }
   input{
     background-color: $secondary-color;
@@ -233,21 +222,30 @@ h5{
   }
   ul{
     background-color: $primary-color;
-    border-radius: 15px;
+    border-radius: 5px 5px 0px 0px;
     margin-top: 5%;
     padding-top: 5%;
+
+    height: 71%;
+    overflow: scroll;
   }
   li{
     margin: 0% 10% 4% 4% ;
     background-color: $clair;
     border-radius: 15px;
     padding: 2%;
+
+    color: $primary-color;
   }
   #add-new{
-    padding: 5%;
+    padding: 4%;
     border: 2px solid $clair;
     background-color: $primary-color;
+    color: $clair;
+    font-weight: bold;
   }
+  #add-new i{font-size: 3em;color: $clair;vertical-align: middle;}
+  button{background-color: $primary-color;margin-top: -7%;}
 
   #userBoard-right-col{
     float: right;
@@ -255,10 +253,15 @@ h5{
     height: 100%;
     background-color: #FFE53B;
     background-image: $gradient;
-
   }
-
-
+  .top-content{
+    width: 100%;
+    height: auto;
+    padding: 0% 10%;
+  }
+  .top-content div{
+    display: inline;
+  }
 
 
 

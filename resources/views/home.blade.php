@@ -64,7 +64,7 @@
         <a href="#!" data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-flat">X</a>
         <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
         <?php
-            echo Form::open(array('url' => 'folder/update/$folder->id'));
+            echo Form::open(array('url' => 'folder/update/'.$folder->id));
                 echo Form::text('title',$folder->title);
                 echo '<br/>';
 

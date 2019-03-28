@@ -12,17 +12,17 @@ class FolderController extends Controller
         return redirect('home');
       }
 
-    public function update($request) {
+    public function update($id,Request $request) {
       //$folder = Folder::where('id', '=', $id)->first();
       //$folder = Folder::find($id);
       //$folder->title = $request;
       //echo '<h1>'.$id.'</h1>';
-      var_dump($request);
+      //var_dump($request);
       //$user->email = 'john@foo.com';
 
       //$folder->save();
-      //Folder::whereId($id)->update($request->all());
-      //return redirect('home');
+      Folder::whereId($id)->update($request->all());
+      return redirect('home');
     }
 
     public function delete($id) {

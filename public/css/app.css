@@ -10916,6 +10916,7 @@ h5 {
   height: 100%;
   background-color: #ffffff;
   padding: 2% 2% 0% 2%;
+  overflow: scroll;
 }
 
 #userBoard #userBoard-left-col-content {

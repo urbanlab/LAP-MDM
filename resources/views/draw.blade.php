@@ -78,8 +78,6 @@ $(function () {
        top: 500,
      }));
   });
-
-
 });
 /* sauvegarder canvas V-1*/
 function saveImage() {

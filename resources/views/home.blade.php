@@ -9,7 +9,7 @@
             <div class="card">
 -->
 
-                <div class="card-header font-strong"><i class="material-icons">keyboard_return</i> &nbsp;&nbsp;{{$currentUser->name}}</div>
+                <div class="card-header font-strong"><a href="{{'/home'}}"><i class="material-icons">keyboard_return</i></a>&nbsp;&nbsp;{{$currentUser->name}}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -90,14 +90,14 @@
 @if ($currentUser->state === 1)
     @foreach ($folders as $folder)
     <div id="popup{{$folder->id}}" class="popup">
-        <a href="#!" data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-floating"><i class="material-icons">close</i></a>
+        <a href="#!" data-id="{{$folder->id}}" class="popup-close waves-effect waves-green btn-floating"><i class="close-large material-icons">close</i></a>
         <h4><i class="material-icons medium">{{ $folder -> icon }}</i>{{$folder->title}}</h4>
         <?php
             echo Form::open(array('url' => 'folder/update/'.$folder->id));
                 echo Form::text('title',$folder->title);
                 echo '<br/>';
 
-                echo Form::text('icon',$folder->icon);
+                echo Form::select('icon', array('house' => 'logement', 'euro_symbol' => 'argent', 'account_balance' => 'accès aux droits'), 'logement');
                 echo '<br/>';
 
                 echo Form::textarea('dsc', $folder->dsc);

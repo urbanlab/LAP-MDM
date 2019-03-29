@@ -23,7 +23,8 @@
 }
 body{
   background-repeat:no-repeat;
-  height: 95vh;
+  height: 100vh;
+
 }
 .gradient-bg{
   background-image: linear-gradient(#FF7660, #FDD093);
@@ -53,9 +54,11 @@ body{
 .logo{
   text-align: center;
   width: 100%;
+  margin: 5% 0%;
 }
 
 .logo img{
+  width: 80%;
 }
 
 input.invalid[type=email]:not(.browser-default), input.invalid[type=email]:not(.browser-default):focus {
@@ -210,6 +213,8 @@ h5{
     font-size: 1.4em;
     overflow: hidden;
 
+    body{height: 95vh !important;}
+
 
   #userBoard-left-col{
     float: left;
@@ -295,7 +300,7 @@ h5{
 ##################################################*/
 #homeBlade{
   background-color: #fff !important;
-  .material-icons{color: #fff !important;}
+  //.material-icons{color: #fff !important;}
   .btn-floating{background-color: $primary-color;width: 100px;height:100px;}
   .btn-large i{font-size: 4em;line-height: 100px;}
 
@@ -333,6 +338,10 @@ h5{
     border: 5px solid $primary-color;
     border-radius:10px;
   }
+  .close-large{
+    font-size: 4em;
+    padding-top: 30px;
+  }
 
   .add_folder {
     position: relative;
@@ -344,19 +353,24 @@ h5{
   }
 
 }
+/*###############################################
+############ MEDIA QUERIES ######################
+###############################################*/
 @media screen and (max-width: 640px){
 #homeBlade{
   .newMission, .addNewMission{
-    width: 40%;
-    margin: 25% auto;
+    width: 70%;
+    margin: 30% auto;
   }
   .newMission::after{
     left:16%;
     height: 80px;
   }
-
-
-
-
 }
+#userBoard-right-col{display: none;}
+#userBoard-left-col{width: 100% !important;}
+
+
+
+
 }

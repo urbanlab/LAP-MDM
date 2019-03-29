@@ -10668,9 +10668,14 @@ a.text-dark:focus {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
 
+.py-4 {
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
+
 body {
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 95vh;
 }
 
 .gradient-bg {
@@ -10741,6 +10746,10 @@ input[type=email]:not(.browser-default):focus:not([readonly]) + label {
 
 input[type=password]:not(.browser-default):focus:not([readonly]) + label {
   color: #FE9769;
+}
+
+select {
+  display: inline-block !important;
 }
 
 .material-icons {
@@ -10846,7 +10855,7 @@ h5 {
 
 #draw-blade #top-col {
   position: absolute;
-  top: 25%;
+  top: 15%;
   right: 3%;
 }
 
@@ -10887,8 +10896,9 @@ h5 {
 
 #userBoard {
   width: 100vw;
-  height: 100vh;
+  height: 93vh;
   font-size: 1.4em;
+  overflow: hidden;
 }
 
 #userBoard #userBoard-left-col {
@@ -10956,13 +10966,37 @@ h5 {
 }
 
 #userBoard .top-content {
-  width: 100%;
+  width: 90%;
   height: auto;
-  padding: 0% 10%;
+  margin: 5%;
 }
 
 #userBoard .top-content div {
   display: inline;
+  color: #FFFFFF;
+  font-size: 2em;
+}
+
+#userBoard a {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+
+#userBoard #deco {
+  padding: 2%;
+  border: 3px solid #FFFFFF;
+  border-radius: 50px;
+}
+
+#userBoard #nom {
+  float: right;
+  margin-right: 2%;
+}
+
+#userBoard #logo {
+  vertical-align: middle;
+  text-align: center;
+  margin-top: 20%;
 }
 
 /*##################################################
@@ -10979,6 +11013,13 @@ h5 {
 
 #homeBlade .btn-floating {
   background-color: #FE9769;
+  width: 100px;
+  height: 100px;
+}
+
+#homeBlade .btn-large i {
+  font-size: 4em;
+  line-height: 100px;
 }
 
 #homeBlade .card-header {
@@ -10989,11 +11030,16 @@ h5 {
 
 #homeBlade .newMission,
 #homeBlade .addNewMission {
-  width: 15%;
+  width: 30%;
   display: block;
   height: auto;
-  margin: 10% auto;
+  margin: 15% auto;
   position: relative;
+}
+
+#homeBlade .color {
+  color: #FE9769 !important;
+  vertical-align: middle;
 }
 
 #homeBlade .addNewMission .btn-floating {
@@ -11002,13 +11048,13 @@ h5 {
 
 #homeBlade .newMission::after {
   content: " ";
-  height: 100px;
+  height: 75px;
   margin-top: 20%;
-  border-left: 3px #aaaaaa dashed;
+  border-left: 4px #FE9769 dashed;
   letter-spacing: 10px;
   position: absolute;
-  left: 12%;
-  top: 55%;
+  left: 22%;
+  top: 65%;
 }
 
 #homeBlade .mission {
@@ -11017,10 +11063,7 @@ h5 {
 
 #homeBlade .mission-info-supp {
   display: inline;
-}
-
-#homeBlade .deleteMission {
-  position: absolute;
+  font-size: 1.3em;
 }
 
 #homeBlade .popup {

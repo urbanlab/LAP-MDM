@@ -11,15 +11,17 @@
         <ul>
           <li id="add-new"><i class="material-icons">add</i>Enregister une nouvelle personne</li>
           @foreach ($users as $user)
-          <a href="/home/{{$user->id}}"><li>{{$user->name}}<br> Prochain RDV : 12/05/19<i class="material-icons right">nature_people</i></li></a>
+          <a href="/home/{{$user->id}}"><li>{{$user->name}}<br> Prochain RDV : 12/05/19<button class="btn-floating btn-large waves-effect waves-light right"><i class="material-icons">nature_people</i></button></li></a>
           @endforeach
         </ul>
     </div>
   </div>
   <div id="userBoard-right-col">
-    <div>Déconnexion</div>
-    <div>Nom app</div>
-    <div>Logo</div>
+    <div class="top-content">
+      <div id="deco"><a href="{{ url('/home') }}">Déconnexion</a></div>
+      <div id="nom">Mon parcours social</div>
+    </div>
+    <div id="logo">Logo</div>
   </div>
 
 </div>

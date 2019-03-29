@@ -17,10 +17,13 @@
   background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
 }
-
+.py-4{
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+}
 body{
   background-repeat:no-repeat;
-  height: 100vh;
+  height: 95vh;
 }
 .gradient-bg{
   background-image: linear-gradient(#FF7660, #FDD093);
@@ -91,7 +94,7 @@ input[type=email]:not(.browser-default):focus:not([readonly])+label {
 input[type=password]:not(.browser-default):focus:not([readonly])+label {
  color: $primary-color;
 }
-
+select{display: inline-block !important;}
 .material-icons
 {
   color: #9D9D9D;
@@ -176,7 +179,7 @@ h5{
 #draw-blade{
   #top-col{
     position: absolute;
-    top:25%;
+    top:15%;
     right:3%;
   }
   .align-item{display: inline; margin-right: 10px;}
@@ -203,8 +206,10 @@ h5{
 ##################################################*/
 #userBoard{
     width: 100vw;
-    height: 100vh;
+    height: 93vh;
     font-size: 1.4em;
+    overflow: hidden;
+
 
   #userBoard-left-col{
     float: left;
@@ -258,12 +263,31 @@ h5{
     background-image: $gradient;
   }
   .top-content{
-    width: 100%;
+    width: 90%;
     height: auto;
-    padding: 0% 10%;
+    margin: 5%;
+
   }
   .top-content div{
     display: inline;
+    color: $clair;
+    font-size: 2em;
+  }
+  a{text-decoration: none;color: $clair;}
+  #deco{
+    padding: 2%;
+    border: 3px solid $clair;
+    border-radius: 50px;
+  }
+  #nom{
+    float: right;
+    margin-right: 2%;
+  }
+  #logo{
+    vertical-align: middle;
+    text-align: center;
+    margin-top: 20%;
+
   }
 }
 /*##################################################
@@ -272,7 +296,8 @@ h5{
 #homeBlade{
   background-color: #fff !important;
   .material-icons{color: #fff !important;}
-  .btn-floating{background-color: $primary-color;}
+  .btn-floating{background-color: $primary-color;width: 100px;height:100px;}
+  .btn-large i{font-size: 4em;line-height: 100px;}
 
   .card-header{
     background-image: $gradient;
@@ -280,28 +305,27 @@ h5{
     color: $clair;
   }
   .newMission, .addNewMission{
-    width: 15%;
+    width: 30%;
     display: block;
     height: auto;
-    margin: 10% auto;
+    margin: 15% auto;
     position: relative;
   }
+  .color{color: $primary-color !important; vertical-align: middle;}
   .addNewMission .btn-floating{background-color: $ternary-color !important;}
+
   .newMission::after{
     content:" ";
-    height: 100px;
+    height: 75px;
     margin-top: 20%;
-    border-left: 3px #aaaaaa dashed;
+    border-left: 4px $primary-color dashed;
     letter-spacing: 10px;
     position: absolute;
-    left: 12%;
-    top:55%;
+    left: 22%;
+    top:65%;
   }
   .mission{display: inline;}
-  .mission-info-supp{display: inline;}
-  .deleteMission{
-    position: absolute;
-  }
+  .mission-info-supp{display: inline;font-size: 1.3em;}
   .popup{
     position: fixed;
     padding: 4%;
@@ -331,7 +355,7 @@ h5{
     height: 80px;
   }
 
- 
+
 
 
 }

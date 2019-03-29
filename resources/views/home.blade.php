@@ -25,22 +25,23 @@
                     @endforeach
                   -->
 
+
                     <!-- icones de parcours-->
                     @foreach ($folders as $folder)
                     <div class="newMission">
                         <div class="mission">
                           <a class="btn-floating btn-large waves-effect waves-light popup-trigger" href="#modal{{$folder->id}}" data-id="{{$folder->id}}">
-                              <i class="material-icons medium">{{ $folder -> icon }}</i>
+                              <i class="material-icons large">{{ $folder -> icon }}</i>
                           </a>
                         </div>
                         <div class="mission-info-supp">{{$folder->title}}</div>
-                        @if ($currentUser->state === 1)  
-                            <a href="{{ url('') }}/folder/delete/{{$folder->id}}/{{$userId}}"><i class="material-icons little">close</i></a>
+                        @if ($currentUser->state === 1)
+                            <a class="deleteMission" href="{{ url('') }}/folder/delete/{{$folder->id}}/{{$userId}}"><i class="material-icons color">close</i></a>
                         @endif
                     </div>
                     @endforeach
 
-                    @if ($currentUser->state === 1) 
+                    @if ($currentUser->state === 1)
                     <!-- nouvelle mission-->
                     <div class="addNewMission">
                       <a class="btn-floating btn-large waves-effect waves-light popup-trigger" >
@@ -48,11 +49,12 @@
                       </a>
                       <div class="add_folder">
                       <?php
-                           echo Form::open(array('url' => 'folder/add/'.$userId));
+                              echo Form::open(array('url' => 'folder/add/'.$userId));
                               echo Form::text('title','Titre');
                               echo '<br/>';
 
-                              echo Form::text('icon','ac_unit');
+                            //  echo Form::text('icon','ac_unit');
+                              echo Form::select('icon', array('house' => 'logement', 'euro_symbol' => 'argent', 'account_balance' => 'accès aux droits'), 'logement');
                               echo '<br/>';
 
                               echo Form::textarea('dsc', 'description');
@@ -68,7 +70,7 @@
                     </div>
                     @endif
                 </div>
-                <!--
+                <!--        <select> <option></option></select>
             </div>
         </div>
     </div>

@@ -2,7 +2,7 @@
 
 @section('head')
 <script src="{{ asset('js/fabric.min.js') }}" defer></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
 <script>
 $(function () {
   var canvas;
@@ -56,6 +56,30 @@ $(function () {
       fill : 'orange'
   });
   canvas.add(rect);
+
+  var picto1 = document.getElementById('picto1');
+  var picto2 = document.getElementById('picto2');
+  var picto3 = document.getElementById('picto3');
+  $("#picto1").click(function(){
+       canvas.add(new fabric.Image(picto1, {
+       left: 400,
+       top: 500,
+     }));
+  });
+  $("#picto2").click(function(){
+       canvas.add(new fabric.Image(picto2, {
+       left: 550,
+       top: 500,
+     }));
+  });
+  $("#picto3").click(function(){
+       canvas.add(new fabric.Image(picto3, {
+       left: 650,
+       top: 500,
+     }));
+  });
+
+
 });
 /* sauvegarder canvas V-1*/
 function saveImage() {
@@ -63,26 +87,8 @@ function saveImage() {
     // transforme en png que pour chrome
     var link = document.createElement('a');
     link.download = "schema-sauvegarde.png";
-
-    var dataURL = canvas.toDataURL("image/png");
-    $.ajax({
-    headers: {
-      'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    },
-    type: "POST",
-    url: "/draw",
-    data: { 
-        imgBase64: 'dataURL'
-    }
-    }).done(function(o) {
-        console.log('saved'); 
-
-        // Do here whatever you want.
-    });
-
-
-    //link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");
-    //link.click();
+    link.href = canvas.toDataURL("image/png").replace("image/png", "image/octet-stream");;
+    link.click();
 };
 </script>
 @endsection
@@ -95,6 +101,15 @@ function saveImage() {
     <div id="top-col">
       <div id="icon-bank" class="align-item">
         <i id="icon-bank-element" class="material-icons">keyboard_arrow_left</i>
+
+        <img src="{{ asset('media/picto1.png')}}" id="picto1"/>
+
+        <img src="{{ asset('media/picto2.png')}}" id="picto2"/>
+
+        <img src="{{ asset('media/picto3.png')}}" id="picto3"/>
+
+
+
         <i id="icon-bank-element" class="material-icons">keyboard_arrow_right</i>
       </div>
         <!-- <button type="button" onclick="saveImage()">enregistrer le canvas</button> -->
@@ -113,7 +128,7 @@ function saveImage() {
 
     <div id="bottom-col">
       <button id="send-btn" class="btn-floating btn-large align-item" type="submit" name="action"><i class="material-icons right">send</i></button>
-      <a href="/home/{{$id}}"><button id="save-btn" class="btn-floating btn-large align-item" onclick="saveImage()"><i class="material-icons right">save</i></button></a>
+      <button id="save-btn" class="btn-floating btn-large align-item" onclick="saveImage()"><i class="material-icons right">save</i></button>
     </div>
 </div><!-- end draw blade div -->
 @endsection

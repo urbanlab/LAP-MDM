@@ -50,9 +50,9 @@ const app = new Vue({
     //$('.modal').modal();
     console.log('MODAL');
 
-    $(".newMission").hover(function(){
+    $(".newMission").on("mouseenter",function(){
       $(".deleteMission").css("display","inline");
     });
-    $(".newMission").mouseout(function(){
+    $(".newMission").on("mouseleave",function(){
       $(".deleteMission").css("display","none");
     });
